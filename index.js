@@ -5,10 +5,6 @@ const cors = require("cors"); // Used to prevent errors when working locally
 // Import routes
 
 const productsRoute = require("./routes/productsRoute");
-const product_categoriesRoute = require("./routes/product_categoriesRoute");
-const categoriesRoute = require("./routes/categoriesRoute");
-const ordersRoute = require("./routes/ordersRoute");
-const order_detailsRoute = require("./routes/order_detailsRoute");
 const userRoute = require("./routes/userRoute");
 const router = require("./routes/userRoute");
 const con = require("./lib/dbConnection");
@@ -29,10 +25,6 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRoute);
 app.use("/products", productsRoute);
-app.use("/product_categories", product_categoriesRoute);
-app.use("/categories", categoriesRoute);
-app.use("/orders", ordersRoute);
-app.use("/order_details", order_detailsRoute);
 // Set up server to start listening for requests
 app.listen(app.get("port"), () => {
   console.log(`http://localhost:${app.get("port")}`);
