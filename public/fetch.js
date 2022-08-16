@@ -1,6 +1,6 @@
 let users = [];
 const uContainer = document.querySelector("#users");
-fetch("http://localhost:6969/users")
+fetch("https://c420a-node.herokuapp.com/users")
   .then((res) => res.json())
   .then((data) => {
     users = data;
@@ -33,7 +33,7 @@ function showusers(users) {
 
 let products = [];
 const pContainer = document.querySelector("#products");
-fetch("http://localhost:6969/products")
+fetch("https://c420a-node.herokuapp.com/products")
   .then((res) => res.json())
   .then((data) => {
     products = data;
